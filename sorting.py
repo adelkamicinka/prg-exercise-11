@@ -52,8 +52,3 @@ def bubble_sort(cisla):
             break
     return cisla
 
-
-
-cisla = [5, 1, 4, 2, 8]
-print("Původní seznam:", cisla)
-print("Seřazený seznam:", selection_sort(cisla))
