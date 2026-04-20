@@ -16,6 +16,43 @@ def selection_sort(cisla):
         cisla[pozice_ukladani], cisla[min_index] = cisla[min_index], cisla[pozice_prochazeni]
     return cisla
 
+import matplotlib.pyplot as plt
+
+# def bubble_sort(cisla):
+#     cisla = cisla.copy()
+#
+#     for serazeno_od_konce in range(len(cisla)):
+#         for pozice_porovnani in range(len(cisla) - 1 - serazeno_od_konce):
+#             index_highlight1 = j
+#             index_highlight2 = j + 1
+#             colors = ["steelblue"] * len(values)
+#             colors[index_highlight1] = "tomato"
+#             colors[index_highlight2] = "tomato"
+#             plt.clf()
+#             plt.bar(range(len(values)), values, color=colors)
+#             plt.title("Bubble Sort")
+#             plt.pause(0.1)
+#
+#             if cisla[pozice_porovnani] > cisla[pozice_porovnani + 1]:
+#                 cisla[pozice_porovnani], cisla[pozice_porovnani + 1] = cisla[pozice_porovnani]
+#     plt.ion()
+#     plt.show()
+#     return cisla
+
+def bubble_sort(cisla):
+    cisla = cisla.copy()
+    for serazeno_od_konce in range(len(cisla)):
+        has_changed = False
+        print(serazeno_od_konce)
+        for pozice_porovnani in range(len(cisla) - 1 - serazeno_od_konce):
+            if cisla[pozice_porovnani] > cisla[pozice_porovnani + 1]:
+                has_changed = True
+                cisla[pozice_porovnani], cisla[pozice_porovnani + 1] = cisla[pozice_porovnani]
+        if not has_changed:
+            break
+    return cisla
+
+
 
 cisla = [5, 1, 4, 2, 8]
 print("Původní seznam:", cisla)
